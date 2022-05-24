@@ -14,6 +14,7 @@
 		9DA4405C283C7940006EC338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4405B283C7940006EC338 /* Assets.xcassets */; };
 		9DA4405F283C7940006EC338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DA4405D283C7940006EC338 /* LaunchScreen.storyboard */; };
 		9DA44067283C7C23006EC338 /* SubjectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA44066283C7C23006EC338 /* SubjectTableViewCell.swift */; };
+		9DA44069283C9E8A006EC338 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA44068283C9E8A006EC338 /* QuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9DA4405E283C7940006EC338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DA44060283C7940006EC338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DA44066283C7C23006EC338 /* SubjectTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubjectTableViewCell.swift; sourceTree = "<group>"; };
+		9DA44068283C9E8A006EC338 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				9DA44056283C793E006EC338 /* ViewController.swift */,
 				9DA44066283C7C23006EC338 /* SubjectTableViewCell.swift */,
 				9DA44058283C793E006EC338 /* Main.storyboard */,
+				9DA44068283C9E8A006EC338 /* QuestionViewController.swift */,
 				9DA4405B283C7940006EC338 /* Assets.xcassets */,
 				9DA4405D283C7940006EC338 /* LaunchScreen.storyboard */,
 				9DA44060283C7940006EC338 /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DA44067283C7C23006EC338 /* SubjectTableViewCell.swift in Sources */,
+				9DA44069283C9E8A006EC338 /* QuestionViewController.swift in Sources */,
 				9DA44057283C793E006EC338 /* ViewController.swift in Sources */,
 				9DA44053283C793E006EC338 /* AppDelegate.swift in Sources */,
 				9DA44055283C793E006EC338 /* SceneDelegate.swift in Sources */,
