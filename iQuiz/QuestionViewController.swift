@@ -10,6 +10,7 @@ import UIKit
 class QuestionViewController: UIViewController {
 
     @IBOutlet weak var question: UILabel!
+    
 
     @IBOutlet weak var answer1: UILabel!
     @IBOutlet weak var answer2: UILabel!
@@ -22,8 +23,6 @@ class QuestionViewController: UIViewController {
     var score = 0
     
     override func viewDidLoad() {
-        print(questions)
-        print( questions[numQuestion].question)
         super.viewDidLoad()
         if !questions.isEmpty {
             question.text = questions[numQuestion].question
@@ -67,8 +66,10 @@ class QuestionViewController: UIViewController {
                 answerVC.numQuestion = numQuestion
                 answerVC.selected = selected
                 answerVC.score = score
+                self.present(answerVC, animated: true)
             }
         }
     }
+    
     
 }

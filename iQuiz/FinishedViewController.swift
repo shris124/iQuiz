@@ -20,17 +20,14 @@ class FinishedViewController: UIViewController {
         Score.text = "\(score)/\(totalQuestions)"
         let ratio = Double(score)/Double(totalQuestions)
         if ratio == 1.0 {
-            Description.text = "You got 100%!"
-        } else if ratio >= 0.75 {
-            Description.text = "You got 75%!"
+            Description.text = "Perfect Score!"
         } else if ratio >= 0.5 {
-            Description.text = "You got 50%!"
-        } else if ratio >= 0.25 {
-            Description.text = "You got 25%!"
-        } else {
+            Description.text = "Average!"
+        } else if ratio <= 0.5 {
+            Description.text = "Below Average!"
+        } else if ratio == 0.0 {
             Description.text = "You failed!"
         }
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func BackToMain(_ sender: Any) {
@@ -39,15 +36,6 @@ class FinishedViewController: UIViewController {
             self.present(subjectVC, animated: true)
         }
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

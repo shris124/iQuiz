@@ -44,19 +44,25 @@ class AnswerViewController: UIViewController {
     
 
     @IBAction func BackToMain(_ sender: Any) {
+        if let subjectVC = storyboard?.instantiateViewController(withIdentifier: "mainVC") as? ViewController {
+            subjectVC.modalPresentationStyle = .fullScreen
+            self.present(subjectVC, animated: true)
+        }
     }
 
     
     @IBAction func nextAction(_ sender: Any) {
-        if (numQuestion + 1) <= questions.count {
+        if (numQuestion + 1) < questions.count {
             if let questionVC = storyboard?.instantiateViewController(withIdentifier: "questionVC") as?  QuestionViewController {
                 questionVC.modalPresentationStyle = .fullScreen
                 questionVC.questions = questions
                 questionVC.numQuestion = numQuestion + 1
                 questionVC.selected = selected
                 questionVC.score = score
+                self.present(questionVC, animated: true)
             }
         } else if let finishedVC = storyboard?.instantiateViewController(withIdentifier: "finishedVC") as? FinishedViewController {
+            print(selected)
             finishedVC.modalPresentationStyle = .fullScreen
             finishedVC.totalQuestions = questions.count
             finishedVC.score = score
