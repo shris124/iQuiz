@@ -17,17 +17,21 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var answer4: UILabel!
     
     var questions: [Question] = []
-    var questionID = 0
+    var numQuestion = 0
     var selected = 0
     var score = 0
     
     override func viewDidLoad() {
+        print(questions)
+        print( questions[numQuestion].question)
         super.viewDidLoad()
-        question.text = questions[questionID].question
-        answer1.text = questions[questionID].answer1
-        answer2.text = questions[questionID].answer2
-        answer3.text = questions[questionID].answer3
-        answer4.text = questions[questionID].answer4
+        if !questions.isEmpty {
+            question.text = questions[numQuestion].question
+            answer1.text = questions[numQuestion].option1
+            answer2.text = questions[numQuestion].option2
+            answer3.text = questions[numQuestion].option3
+            answer4.text = questions[numQuestion].option4
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -56,6 +60,15 @@ class QuestionViewController: UIViewController {
     }
     
     @IBAction func SubmitSelectedAnswer(_ sender: Any) {
+        if selected != 0 {
+            if let answerVC = storyboard?.instantiateViewController(withIdentifier: "AnswerVC") as?  AnswerViewController {
+                answerVC.modalPresentationStyle = .fullScreen
+                answerVC.questions = questions
+                answerVC.numQuestion = numQuestion
+                answerVC.selected = selected
+                answerVC.score = score
+            }
+        }
     }
     
 }

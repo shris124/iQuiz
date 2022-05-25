@@ -20,9 +20,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     var settings: UIAlertController!
     var subjects: [Subject] = [
-        Subject(title: "Mathematics", description: "Test your mathematical skills", imageName: "math", questions: [Question(question: "What is 2 * 2", answer1: "1", answer2: "2", answer3: "3", answer4: "4", correct: 4), Question(question: "What is 32/16", answer1: "4", answer2: "16", answer3: "2", answer4: "8", correct: 3), Question(question: "What is the 42 + 6 * 3", answer1: "84", answer2: "50", answer3: "60", answer4: "70", correct: 3)]),
-        Subject(title: "Marvel Super Heroes", description: "Test your marvel trivia skills", imageName: "marvel", questions: [Question(question: "How many infinity stones are there?", answer1: "6", answer2: "5", answer3: "8", answer4: "9", correct: 1), Question(question: "What is the name of the thor's hammer?", answer1: "Mjolnir", answer2: "Loki", answer3: "Ragnarok", answer4: "Time Stone", correct: 1), Question(question: "what is the first movie in time chronlogical order?", answer1: "Avengers: Endgame", answer2: "Ant-Man and the Wasp", answer3: "Spiderman Homecoming", answer4: "Captain America: The First Avenger", correct: 4)]),
-        Subject(title: "Science", description: "Test your science skills", imageName: "science", questions: [Question(question: "What is the center of an atom", answer1: "Nucleus", answer2: "Hydrogen", answer3: "Proton", answer4: "Electron", correct: 1), Question(question: "How many hearts does an octupus have?", answer1: "1", answer2: "2", answer3: "3", answer4: "4", correct: 3), Question(question: "How many colors does a rainbow have?", answer1: "4", answer2: "5", answer3: "6", answer4: "7", correct: 4)]),
+        Subject(title: "Mathematics", description: "Test your mathematical skills", imageName: "math", questions: [Question(question: "What is 2 * 2", option1: "1", option2: "2", option3: "3", option4: "4", correct: 4), Question(question: "What is 32/16", option1: "4", option2: "16", option3: "2", option4: "8", correct: 3), Question(question: "What is the 42 + 6 * 3", option1: "84", option2: "50", option3: "60", option4: "70", correct: 3)]),
+        Subject(title: "Marvel Super Heroes", description: "Test your marvel trivia skills", imageName: "marvel", questions: [Question(question: "How many infinity stones are there?", option1: "6", option2: "5", option3: "8", option4: "9", correct: 1), Question(question: "What is the name of the thor's hammer?", option1: "Mjolnir", option2: "Loki", option3: "Ragnarok", option4: "Time Stone", correct: 1), Question(question: "what is the first movie in time chronlogical order?", option1: "Avengers: Endgame", option2: "Ant-Man and the Wasp", option3: "Spiderman Homecoming", option4: "Captain America: The First Avenger", correct: 4)]),
+        Subject(title: "Science", description: "Test your science skills", imageName: "science", questions: [Question(question: "What is the center of an atom", option1: "Nucleus", option2: "Hydrogen", option3: "Proton", option4: "Electron", correct: 1), Question(question: "How many hearts does an octupus have?", option1: "1", option2: "2", option3: "3", option4: "4", correct: 3), Question(question: "How many colors does a rainbow have?", option1: "4", option2: "5", option3: "6", option4: "7", correct: 4)]),
         ]
     
     override func viewDidLoad() {
@@ -52,7 +52,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 250
     }
     
    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -68,18 +68,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 class Question {
     
     let question: String!
-    let answer1: String!
-    let answer2: String!
-    let answer3: String!
-    let answer4: String!
+    let option1: String!
+    let option2: String!
+    let option3: String!
+    let option4: String!
     let correct: Int!
     
-    init(question: String, answer1: String, answer2: String, answer3: String, answer4: String, correct: Int) {
+    init(question: String, option1: String, option2: String, option3: String, option4: String, correct: Int) {
         self.question = question
-        self.answer1 = answer1
-        self.answer2 = answer2
-        self.answer3 = answer3
-        self.answer4 = answer4
+        self.option1 = option1
+        self.option2 = option2
+        self.option3 = option3
+        self.option4 = option4
         self.correct = correct
     }
     
